@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>连连看游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>连连看游戏</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="label">分数:</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">剩余对数:</span>
+                    <span class="value" id="remaining">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">时间:</span>
+                    <span class="value" id="timer">00:00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-board" id="gameBoard"></div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="newGameBtn">新游戏</button>
+            <button class="btn btn-secondary" id="hintBtn">提示</button>
+            <button class="btn btn-secondary" id="undoBtn">撤销</button>
+            <button class="btn btn-secondary" id="pauseBtn">暂停</button>
+        </div>
+
+        <div class="modal" id="gameOverModal">
+            <div class="modal-content">
+                <h2>游戏结束🎉</h2>
+                <p>你的最终分数: <span id="finalScore">0</span></p>
+                <button class="btn btn-primary" id="restartBtn">再玩一局</button>
+            </div>
+        </div>
+
+        <div class="pause-overlay" id="pauseOverlay">
+            <div class="pause-content">
+                <h2>游戏已暂停</h2>
+                <p>点击任意位置继续游戏</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
